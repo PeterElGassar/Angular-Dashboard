@@ -1,0 +1,33 @@
+.row {
+    display: flex;
+    justify-content: end;
+}
+
+.filter {
+    background: #fff;
+    width: 90px;
+    height: 50px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inbox-filter {
+    width: 38%;
+    text-align: center;
+    border-left: 1px solid #aaaaaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.b-filter {
+    margin: 0 20%;
+}
+
+.lucide-chevron-down {
+    width: 80%;
+    height: 60%;
+}

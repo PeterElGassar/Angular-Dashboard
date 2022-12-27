@@ -1,0 +1,112 @@
+<!-- filter -->
+<app-filter></app-filter>
+<!-- end-filter -->
+<h1 class="text-center">HAI Surveillance Graphs</h1>
+
+<div class="grid grid-cols-12 gap-6">
+    <!-- ================HAI ICU Infection Location================  -->
+    <!-- Bars -->
+
+    <!-- HAI ICU Infection Location  -->
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-pie-chart [pieChrtModel]="pieChart"></app-pie-chart>
+    </div>
+
+
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-pie-chart [pieChrtModel]="dounteChart"></app-pie-chart>
+    </div>
+
+
+
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-pie-chart [pieChrtModel]="dounteChart2"></app-pie-chart>
+    </div>
+
+    <!-- lines -->
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-line-chart [lineChartModel]="lineChart"></app-line-chart>
+    </div>
+
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-line-chart [lineChartModel]="lineChart1"></app-line-chart>
+    </div>
+
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-line-chart [lineChartModel]="lineChart2"></app-line-chart>
+    </div>
+
+
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-line-chart [lineChartModel]="lineChart3"></app-line-chart>
+    </div>
+
+    <!-- lines -->
+
+
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <h1 class="text-center">Needle Stick Injury Graphs</h1>
+    </div>
+    <!-- marker Line -->
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <app-line-chart [lineChartModel]="lineChart4"></app-line-chart>
+    </div>
+    <!-- marker Line -->
+
+
+
+
+
+    <!-- Gauge 1 -->
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <h1 class="text-center">HAI ICU Infection Distribution (per 1000) </h1>
+    </div>
+
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeChart"></app-gauge>
+    </div>
+    <!-- Gauge 1 -->
+
+    <!-- Gauge 2 -->
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeChart2"></app-gauge>
+    </div>
+    <!-- Gauge 2 -->
+
+    <!-- Gauge 3 -->
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeChart3"></app-gauge>
+    </div>
+    <!-- Gauge 3 -->
+
+
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <h1 class="text-center">IPC Program </h1>
+    </div>
+
+    <!-- IPC Program -->
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <app-bar-chart [barChartModel]="chartBars"></app-bar-chart>
+    </div>
+    <!-- Antimicrobial Stewardship -->
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-bar-chart [barChartModel]="chartBars2"></app-bar-chart>
+    </div>
+
+    <!-- Safe Injection -->
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-bar-chart [barChartModel]="chartBars3"></app-bar-chart>
+    </div>
+    <!-- Total Score -->
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-bar-chart [barChartModel]="chartBars4"></app-bar-chart>
+    </div>
+
+    <!-- marker Line -->
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <app-line-chart [lineChartModel]="lineChart5"></app-line-chart>
+    </div>
+    <!-- marker Line -->
+    <!-- END HAI Surveillance Graphs -->
+
+</div>

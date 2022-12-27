@@ -1,0 +1,126 @@
+<!-- filter -->
+<app-filter></app-filter>
+<!-- end-filter -->
+<h1 class="text-center">Needle Stick Injury </h1>
+
+<div class="grid grid-cols-12 gap-6">
+    <!-- ================HAI ICU Infection Location================  -->
+    <!-- Bars -->
+
+    <!-- Age   -->
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-pie-chart [pieChrtModel]="dounteChart"></app-pie-chart>
+    </div>
+
+  <!-- Occupation -->
+  <div class="col-span-12 lg:col-span-6 mt-8">
+    <app-bar-chart [barChartModel]="chartBars"></app-bar-chart>
+   </div>
+
+    <!-- Location of the Accident -->
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-bar-chart [barChartModel]="chartBars2"></app-bar-chart>
+    </div>
+
+        <!-- Injury Status -->
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-pie-chart [pieChrtModel]="dounteChart2"></app-pie-chart>
+    </div>
+
+    <!--Types of Activity During Incidence -->
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <app-bar-chart [barChartModel]="chartBars3"></app-bar-chart>
+    </div>
+<div class="col-span-12 lg:col-span-6 mt-8">
+    <app-pie-chart [pieChrtModel]="dounteChart3"></app-pie-chart>
+</div>
+
+    <!-- Gauge gaugeHIVChart -->
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <h1 class="text-center">Source</h1>
+    </div>
+
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeHIVChart"></app-gauge>
+    </div>
+    <!-- Gauge 1 -->
+
+    <!-- Gauge 2 -->
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeHCBChart"></app-gauge>
+    </div>
+    <!-- Gauge 2 -->
+
+    <!-- Gauge 3 -->
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeHBVChart"></app-gauge>
+    </div>
+    <!-- Gauge 3 -->
+
+<!-- here -->
+    <!-- Gauge gaugeHIVChart -->
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <h1 class="text-center">Health Care Worker</h1>
+    </div>
+
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeHIVChart1"></app-gauge>
+    </div>
+    <!-- Gauge 1 -->
+
+    <!-- Gauge 2 -->
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeHCBChart1"></app-gauge>
+    </div>
+    <!-- Gauge 2 -->
+
+    <!-- Gauge 3 -->
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeHBVChart1"></app-gauge>
+    </div>
+    <!-- Gauge 3 -->
+<!-- here -->
+
+
+<!-- *********************** -->
+    <!-- Gauge 1 -->
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <h1 class="text-center">HAI ICU Infection Distribution</h1>
+    </div>
+
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeChart"></app-gauge>
+    </div>
+    <!-- Gauge 1 -->
+
+    <!-- Gauge 2 -->
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeChart2"></app-gauge>
+    </div>
+    <!-- Gauge 2 -->
+
+    <!-- Gauge 3 -->
+    <div class="col-span-12 lg:col-span-4 mt-8">
+        <app-gauge [gaugeChrtModel]="gaugeChart3"></app-gauge>
+    </div>
+    <!-- Gauge 3 -->
+
+
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <h1 class="text-center">IPC Program </h1>
+    </div>
+
+    <!-- IPC Program -->
+    <div class="col-span-12 lg:col-span-12 mt-8">
+        <app-bar-chart [barChartModel]="chartBars"></app-bar-chart>
+    </div>
+
+
+
+    <!-- Total Score -->
+    <div class="col-span-12 lg:col-span-6 mt-8">
+        <app-bar-chart [barChartModel]="chartBars4"></app-bar-chart>
+    </div>
+    <!-- END HAI Surveillance Graphs -->
+
+</div>

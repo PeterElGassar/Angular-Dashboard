@@ -1,63 +1,88 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
+import { ChartPieModel } from 'src/app/core/utils/interfaces/chart';
 
 @Component({
   selector: 'app-pie-chart',
   templateUrl: './pie-chart.component.html',
-  styleUrls: ['./pie-chart.component.scss']
+  styleUrls: ['./pie-chart.component.scss'],
 })
 export class PieChartComponent implements OnInit {
-
+  @Input() pieChrtModel: ChartPieModel;
   chartOption: EChartsOption = {};
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    this.chartOption = {
-      tooltip: {
-        trigger: 'item'
-      },
-      legend: {
-        top: '5%',
-        left: 'center'
-      },
-      series: [
-        {
-          name: 'Access From',
-          type: 'pie',
-          radius: ['40%', '70%'],
-          avoidLabelOverlap: false,
-          itemStyle: {
-            borderRadius: 10,
-            borderColor: '#fff',
-            borderWidth: 2
-          },
-          label: {
-            show: false,
-            position: 'center'
-          },
-          emphasis: {
+
+    if (this.pieChrtModel.isDounte) {
+
+      this.chartOption = {
+        title: this.pieChrtModel?.title,
+
+        tooltip: {
+          trigger: 'item',
+        },
+        legend: {
+          bottom: '0%',
+          left: 'center',
+        },
+        series: [
+          {
+            name: 'Access From',
+            type: 'pie',
+            radius: this.pieChrtModel.radius,
+            avoidLabelOverlap: false,
+            itemStyle: {
+              borderRadius: 10,
+              borderColor: '#fff',
+              borderWidth: 2,
+            },
             label: {
-              show: true,
-              fontSize: 40,
-              fontWeight: 'bold'
-            }
+              show: false,
+              position: 'center',
+            },
+            emphasis: {
+              label: {
+                show: true,
+                fontSize: 20,
+                fontWeight: 'bold',
+              },
+            },
+            labelLine: {
+              show: false,
+            },
+            data: this.pieChrtModel?.data,
           },
-          labelLine: {
-            show: false
+        ],
+      };
+    } else {
+      this.chartOption = {
+        title: this.pieChrtModel?.title,
+        tooltip: {
+          trigger: 'item',
+        },
+        legend: {
+          bottom: '5%',
+          left: 'center',
+        },
+        series: [
+          {
+            name: 'Access From',
+            type: 'pie',
+            radius: this.pieChrtModel.radius,
+            data: this.pieChrtModel?.data,
+
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)',
+              },
+            },
           },
-          data: [
-            { value: 1048, name: 'Search Engine' },
-            { value: 735, name: 'Direct' },
-            { value: 580, name: 'Email' },
-            { value: 484, name: 'Union Ads' },
-            { value: 300, name: 'Video Ads' }
-          ]
-        }
-      ]
-    };
-
-
+        ],
+      };
+    }
   }
-
 }

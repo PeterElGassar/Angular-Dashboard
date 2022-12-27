@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { ChartsModule } from './@shared/charts/charts.module';
 import { SharedModule } from './@shared/shared.module';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
