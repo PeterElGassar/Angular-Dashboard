@@ -6,7 +6,7 @@ import {
   GaugePieModel,
   LineChartModel,
 } from 'src/app/core/utils/interfaces/chart';
-
+import Labels from 'src/assets/_files/label-en.json'
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -14,6 +14,9 @@ import {
 })
 export class MainPageComponent implements OnInit {
   title = 'dashboard';
+  
+  public lebels:any = Labels;
+
   chartMonthly: BarChartModel;
   // pies
   pieChart: ChartPieModel;
@@ -48,7 +51,7 @@ lineChart5: LineChartModel;
       { value: 484, name: 'Surgical Site Infection' },
     ];
     this.pieChart.title = {
-      text: 'HAI ICU Infection Location ',
+      text: this.lebels.chartTitle.HAI_ICU_Infection_Location,
       left: 'center',
     };
 
@@ -65,7 +68,7 @@ lineChart5: LineChartModel;
     ];
 
     this.dounteChart.title = {
-      text: 'HAI ICU Infections',
+      text:  this.lebels.chartTitle.HAI_ICU_Infections,
       left: 'center',
     };
     this.dounteChart.radius = ['40%', '70%'];
@@ -81,7 +84,7 @@ lineChart5: LineChartModel;
       { value: 76, name: 'Organ/Space SSI' },
     ];
     this.dounteChart2.title = {
-      text: 'HAI SSI Infections',
+      text: this.lebels.chartTitle.HAI_SSI_Infections,
       left: 'center',
     };
     this.dounteChart2.radius = ['40%', '70%'];
@@ -100,7 +103,7 @@ lineChart5: LineChartModel;
     ];
     this.lineChart.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.lineChart.title = {
-      text: 'BSI',
+      text:  this.lebels.chartTitle.BSI,
       left: 'center',
     };
     this.lineChart.areaStyle = null
@@ -111,7 +114,7 @@ lineChart5: LineChartModel;
       'April 2022', 'March 2021', 'June 2022 ', 'May 2022'   
     ];
     this.lineChart1.backgroundColor = 'rgba(180, 180, 180, 0.2)';
-    this.lineChart1.title = {text: 'PNU',left: 'center'};
+    this.lineChart1.title = {text:this.lebels.chartTitle.PNU,left: 'center'};
     this.lineChart1.areaStyle = null
 
     //2
@@ -122,7 +125,7 @@ lineChart5: LineChartModel;
     ];
     this.lineChart2.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.lineChart2.title = {
-      text: 'UTI',
+      text: this.lebels.chartTitle.UTI,
       left: 'center',
     };
     this.lineChart2.areaStyle = null
@@ -135,7 +138,7 @@ lineChart5: LineChartModel;
     ];
     this.lineChart3.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.lineChart3.title = {
-      text: 'SSI',
+      text:  this.lebels.chartTitle.SSI,
       left: 'center',
     };
     this.lineChart3.areaStyle = null
@@ -148,7 +151,7 @@ lineChart5: LineChartModel;
     ];
     this.lineChart4.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.lineChart4.title = {
-      text: 'Needle Stick Injury Incidents Trend ',
+      text:  this.lebels.chartTitle.Needle_Stick_Injury_Incidents_Trend,
       left: 'center',
     };
     // End-Lines***********
@@ -186,7 +189,8 @@ lineChart5: LineChartModel;
     ];
     this.chartBars.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.chartBars.title = {
-      text: 'IPC Program',
+      text:  this.lebels.chartTitle.IPC_Program,
+
       left: 'center',
     };
 
@@ -205,7 +209,8 @@ lineChart5: LineChartModel;
     ];
     this.chartBars2.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.chartBars2.title = {
-      text: 'Antimicrobial Stewardship',
+      text:  this.lebels.chartTitle.Antimicrobial_Stewardship,
+
       left: 'center',
     };
 
@@ -224,7 +229,8 @@ lineChart5: LineChartModel;
     ];
     this.chartBars3.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.chartBars3.title = {
-      text: 'Safe Injection',
+      text:  this.lebels.chartTitle.Safe_Injection,
+
       left: 'center',
     };
     // Bar Total Score
@@ -242,7 +248,7 @@ lineChart5: LineChartModel;
     ];
     this.chartBars4.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.chartBars4.title = {
-      text: 'Total Score',
+      text:  this.lebels.chartTitle.Total_Score,
       left: 'center',
     };
 // line marker
@@ -254,7 +260,8 @@ lineChart5: LineChartModel;
  ];
  this.lineChart5.backgroundColor = 'rgba(180, 180, 180, 0.2)';
  this.lineChart5.title = {
-   text: 'Needle Stick Injury Incidents',
+   text:  this.lebels.chartTitle.Needle_Stick_Injury_Incidents,
+
    left: 'center',
  };
   }

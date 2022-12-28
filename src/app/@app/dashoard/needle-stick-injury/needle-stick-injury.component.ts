@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BarChartModel, ChartPieModel, GaugePieModel } from 'src/app/core/utils/interfaces/chart';
+import Labels from 'src/assets/_files/label-en.json'
 
 @Component({
   selector: 'app-needle-stick-injury',
@@ -7,6 +8,7 @@ import { BarChartModel, ChartPieModel, GaugePieModel } from 'src/app/core/utils/
   styleUrls: ['./needle-stick-injury.component.scss']
 })
 export class NeedleStickInjuryComponent implements OnInit {
+  public lebels:any = Labels;
 
   title = 'Needle Stick Injury';
   chartMonthly: BarChartModel;
@@ -48,7 +50,7 @@ export class NeedleStickInjuryComponent implements OnInit {
     ];
 
     this.dounteChart.title = {
-      text: 'Age',
+      text: this.lebels.chartTitle.Age,
       left: 'center',
     };
     this.dounteChart.radius = ['40%', '70%'];
@@ -64,7 +66,7 @@ export class NeedleStickInjuryComponent implements OnInit {
       { value: 76, name: 'Severe' },
     ];
     this.dounteChart2.title = {
-      text: 'Injury Status',
+      text: this.lebels.chartTitle.Injury_Status,
       left: 'center',
     };
     this.dounteChart2.radius = ['40%', '70%'];
@@ -79,7 +81,8 @@ export class NeedleStickInjuryComponent implements OnInit {
       { value: 34, name: 'No' },
     ];
     this.dounteChart3.title = {
-      text: 'Post-Exposure prophylaxis Training',
+      text: 
+      this.lebels.chartTitle.Post_Exposure_prophylaxis_Training,
       left: 'center',
     };
     this.dounteChart3.radius = ['40%', '70%'];
@@ -152,7 +155,8 @@ export class NeedleStickInjuryComponent implements OnInit {
     ];
     this.chartBars.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.chartBars.title = {
-      text: 'Occupation',
+      text:this.lebels.chartTitle.Occupation,
+
       left: 'center',
     };
 
@@ -165,7 +169,9 @@ export class NeedleStickInjuryComponent implements OnInit {
     ];
     this.chartBars2.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.chartBars2.title = {
-      text: 'Antimicrobial Stewardship',
+      text:
+      this.lebels.chartTitle.Antimicrobial_Stewardship,
+
       left: 'center',
     };
 
@@ -179,7 +185,7 @@ export class NeedleStickInjuryComponent implements OnInit {
     ];
     this.chartBars3.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.chartBars3.title = {
-      text: 'Types of Activity During Incidence',
+      text:this.lebels.chartTitle.Types_Activity_During_Incidence,
       left: 'center',
     };
     
@@ -198,7 +204,7 @@ export class NeedleStickInjuryComponent implements OnInit {
     ];
     this.chartBars4.backgroundColor = 'rgba(180, 180, 180, 0.2)';
     this.chartBars4.title = {
-      text: 'Total Score',
+      text: this.lebels.chartTitle.Total_Score,
       left: 'center',
     };
   }

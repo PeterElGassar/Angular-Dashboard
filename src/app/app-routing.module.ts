@@ -8,8 +8,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () =>
       import('src/app/@app/dashoard/dashboard.module').then((m) => m.DashboardModule)
-  },
-  
+  }, 
   { path: '', redirectTo: '', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
 ];

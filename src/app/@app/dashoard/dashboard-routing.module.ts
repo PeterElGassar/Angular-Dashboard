@@ -5,8 +5,10 @@ import { NeedleStickInjuryComponent } from './needle-stick-injury/needle-stick-i
 
 const routes: Routes = [
   { path: 'main-page', component: MainPageComponent },
-  { path: 'needle-stick-injury', component: NeedleStickInjuryComponent }
+  { path: 'needle-stick-injury', component: NeedleStickInjuryComponent },
 
+  { path: '', redirectTo: 'main-page', pathMatch: 'full' },
+  { path: '**', redirectTo: 'main-page' },
 ];
 
 @NgModule({

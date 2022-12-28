@@ -1,0 +1,40 @@
+{
+    "chartHeaders":{
+        "HAI_ICU_Infection_Distribution":"HAI ICU Infection Distribution (per 1000)",
+        "HAI_Surveillance_Graphs":"HAI Surveillance",
+        "Needle_Stick_Injury_Graphs":"Needle Stick Injury",
+        "IPC_Program":"IPC Program",
+        "Source":"Source",
+        "Health_Care_Worker":"Health Care Worker",
+        "HAI_ICU_Infection_Distribution2":"HAI ICU Infection Distribution"
+    },
+    "chartTitle":{
+        "HAI_ICU_Infection_Location":"HAI ICU Infection Location",
+        "HAI_ICU_Infections":"HAI ICU Infections",
+        "HAI_SSI_Infections":"HAI SSI Infections",
+        "BSI":"BSI",
+        "PNU":"PNU",
+        "UTI":"UTI",
+        "SSI":"SSI",
+        "Needle_Stick_Injury_Incidents_Trend":"Needle Stick Injury Incidents Trend",
+        "IPC_Program":"IPC Program",
+
+
+        "Antimicrobial_Stewardship":"Antimicrobial Stewardship",
+        "Total_Score":"Total Score",
+        "Needle_Stick_Injury_Incidents":"Needle Stick Injury Incidents",
+        "Safe_Injection":"Safe Injection",
+       
+        "Age":"Age",
+        "Injury_Status":"Injury Status",
+        "Post_Exposure_prophylaxis_Training":
+        "Post-Exposure prophylaxis Training",
+        "Occupation":"Occupation",
+        "Types_Activity_During_Incidence":"Types of Activity During Incidence"
+    },
+    "MenuItem":{
+        "Needle_Stick_Injury":"Needle Stick Injury",
+        "Main_Page":"Main Page"
+    }
+
+}
